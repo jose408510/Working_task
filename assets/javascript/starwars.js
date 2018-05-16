@@ -31,4 +31,36 @@ var characters = {
     }
 }
 
+  // Will be populated when the player selects a character.
+  var attacker;
+  // Populated with all the characters the player didn't select.
+  var combatants = [];
+  // Will be populated when the player chooses an opponent.
+  var defender;
+  // Will keep track of turns during combat. Used for calculating player damage.
+  var turnCounter = 1;
+  // Tracks number of defeated opponents.
+  var killCount = 0;
+
+
+
+  var renderCharacter = function(character, renderArea) {
+    var charDiv = $("<div class='character' data-name='" + character.name + "'>");
+    var charName = $("<div class='character-name'>").text(character.name);
+    var charImage = $("<div class='character' data-name='" + character.name + "'>");
+    var charHealth = $("<div class='character' data-name='" + character.name + "'>");
+
+
+
+
+
+  }
+
+
+
+
+
+
+
+
 });
