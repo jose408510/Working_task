@@ -59,7 +59,19 @@ var characters = {
     }
 };
     initializeGame();
-
+  // This function handles updating the selected player or the current defender. If there is no selected player/defender this
+  // function will also place the character based on the areaRender chosen (e.g. #selected-character or #defender)
+    var updateCharacter = function(charObj, areaRender){
+            // First we empty the area so that we can re-render the new object
+        $(areaRender).emepty();
+        renderCharacter(charObj, areaRender);
+    };
+  // This function will render the available-to-attack enemies. This should be run once after a character has been selected
+    var renderEnemies  = function(enemyArr){
+        for(var i = 0; i < enemyArr; i++);{
+            rendercharacter(enemyArr[i], "#available-to-attack-section");
+        }
+    }
 
 
 
