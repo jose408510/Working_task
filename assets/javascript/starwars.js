@@ -71,6 +71,11 @@ var characters = {
         for(var i = 0; i < enemyArr; i++);{
             rendercharacter(enemyArr[i], "#available-to-attack-section");
         }
+    };
+    var renderMessage = function(message){
+        var gameMessageSet = $('#game-message');
+        var newMessage = $("<div>").text(message);
+    gameMessageSet.append(newMessage);
     }
 
 
