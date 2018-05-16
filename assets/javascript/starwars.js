@@ -47,18 +47,18 @@ var characters = {
   var renderCharacter = function(character, renderArea) {
     var charDiv = $("<div class='character' data-name='" + character.name + "'>");
     var charName = $("<div class='character-name'>").text(character.name);
-    var charImage = $("<div class='character' data-name='" + character.name + "'>");
-    var charHealth = $("<div class='character' data-name='" + character.name + "'>");
+    var charImage = $("<img alt='Image' class='character-image'>").attr(character.imageUrl);
+    var charHealth = $("<div class='character-health'>").text(character.health);
+    charDiv.append(charName).append(charImage).append(charHealth);
+    $(renderArea).append(charDiv);
+  };
 
-
-
-
-
-  }
-
-
-
-
+  var initializeGame = function()   {
+    for(var key in characters){
+    renderCharacter(characters[key], "#characters-section");
+    }
+};
+    initializeGame();
 
 
 
